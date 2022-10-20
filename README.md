@@ -1,2 +1,2 @@
-# design-patterns-java
+# Design Patterns Java
 Boas práticas de programação
