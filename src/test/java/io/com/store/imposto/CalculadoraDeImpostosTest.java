@@ -1,6 +1,8 @@
 package io.com.store.imposto;
 
 import io.com.store.imposto.service.CalculadoraDeImpostos;
+import io.com.store.imposto.strategy.ICMS;
+import io.com.store.imposto.strategy.ISS;
 import io.com.store.orcamento.Orcamento;
 import junit.framework.TestCase;
 
