@@ -1,5 +1,6 @@
-package io.com.store.imposto;
+package io.com.store.imposto.strategy;
 
+import io.com.store.imposto.actions.Imposto;
 import io.com.store.orcamento.Orcamento;
 
 import java.math.BigDecimal;
