@@ -8,7 +8,13 @@ Boas práticas de programação
   - Criacionais
 
 ## Strategy
+- É um padrão de projeto comportamental que permite que você defina uma família de algoritmos, coloque-os em classes separadas, e faça os objetos deles intercambiáveis.
 - Como diminuir a complexidade do nosso código, trocando múltiplas condicionais por classes:
     - Esta técnica é chamada de Strategy, que é um dos padrões de projeto
-- Strategy é um padrão de projeto comportamental que permite que você defina uma família de algoritmos, coloque cada um em uma classe separada e os torne intercambiáveis.
 
+![](https://refactoring.guru/images/patterns/diagrams/strategy/solution.png)
+
+## Chain of Responsibility
+- É um padrão de projeto comportamental que permite que você passe pedidos por uma corrente de handlers. Ao receber um pedido, cada handler decide se processa o pedido ou o passa adiante para o próximo handler na corrente.
+
+![](https://refactoring.guru/images/patterns/diagrams/chain-of-responsibility/solution1-pt-br.png)
