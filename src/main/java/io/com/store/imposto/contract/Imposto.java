@@ -1,4 +1,4 @@
-package io.com.store.imposto.actions;
+package io.com.store.imposto.contract;
 
 import io.com.store.orcamento.Orcamento;
 

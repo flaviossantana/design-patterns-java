@@ -1,5 +1,6 @@
 package io.com.store.desconto.chain;
 
+import io.com.store.desconto.template.Desconto;
 import io.com.store.orcamento.Orcamento;
 
 import java.math.BigDecimal;
@@ -10,13 +11,14 @@ public class DescontoPorQuantidadeDeItens extends Desconto {
         super(proximo);
     }
 
-    public BigDecimal calcular(Orcamento orcamento) {
+    @Override
+    public boolean isDeveAplicarDesconto(Orcamento orcamento) {
+        return orcamento.getQuantidadeItens() > 5;
+    }
 
-        if (orcamento.getQuantidadeItens() > 5) {
-            return orcamento.getValor().multiply(new BigDecimal("0.1"));
-        }
-
-        return proximo.calcular(orcamento);
+    @Override
+    protected BigDecimal efetuarCalculo(Orcamento orcamento) {
+        return orcamento.getValor().multiply(new BigDecimal("0.1"));
     }
 
 }
