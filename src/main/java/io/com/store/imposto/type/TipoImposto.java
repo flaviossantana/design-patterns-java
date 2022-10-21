@@ -1,4 +1,4 @@
-package io.com.store.imposto;
+package io.com.store.imposto.type;
 
 import java.math.BigDecimal;
 
