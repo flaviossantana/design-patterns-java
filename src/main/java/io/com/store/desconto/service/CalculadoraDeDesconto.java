@@ -1,6 +1,6 @@
 package io.com.store.desconto.service;
 
-import io.com.store.desconto.chain.Desconto;
+import io.com.store.desconto.template.Desconto;
 import io.com.store.desconto.chain.DescontoPorQuantidadeDeItens;
 import io.com.store.desconto.chain.DescontoPorValorDaCompra;
 import io.com.store.desconto.chain.DescontoZero;
