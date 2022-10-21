@@ -40,10 +40,6 @@ public class Orcamento {
         return quantidadeItens;
     }
 
-    public SituacaoOrcamento getSituacao() {
-        return situacao;
-    }
-
     public void setSituacao(SituacaoOrcamento situacao) {
         this.situacao = situacao;
     }

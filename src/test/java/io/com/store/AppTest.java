@@ -29,6 +29,7 @@ public class AppTest
      * Rigourous Test :-)
      */
     public void testApp() {
+        new App().main(new String[]{"Simples Teste"});
         assertTrue(true);
     }
 }
