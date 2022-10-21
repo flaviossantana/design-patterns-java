@@ -23,3 +23,7 @@ Boas práticas de programação
 - É um padrão de projeto comportamental que define o esqueleto de um algoritmo na superclasse, mas permite que as subclasses substituam etapas específicas do algoritmo sem mudar sua estrutura.
 
 ![](https://refactoring.guru/images/patterns/diagrams/template-method/structure.png?id=924692f994bff6578d8408d90f6fc459)
+
+## State
+- É um padrão de projeto comportamental que permite que um objeto altere seu comportamento quando seu estado interno muda. Parece que o objeto mudou sua classe.
+![](https://refactoring.guru/images/patterns/diagrams/state/problem2-pt-br.png)
