@@ -17,13 +17,13 @@ public class CalculadoraDeDescontoTest extends TestCase {
     public void testDeveriaCalcularDescontoComOrcamentoComMaisDeCincoItens() {
         Orcamento orcamentoSeisItens = new Orcamento( new BigDecimal("1000"), 6);
         CalculadoraDeDesconto calculadoraDeDesconto = new CalculadoraDeDesconto();
-        assertEquals(new BigDecimal("100").setScale(2, RoundingMode.HALF_UP), calculadoraDeDesconto.calcular(orcamentoSeisItens));
+        assertEquals(new BigDecimal("100.0"), calculadoraDeDesconto.calcular(orcamentoSeisItens));
     }
 
     public void testDeveriaCalcularDescontoOrcamentoMaiorQueMilReais() {
         Orcamento orcamentoSeisItens = new Orcamento( new BigDecimal("1000"), 1);
         CalculadoraDeDesconto calculadoraDeDesconto = new CalculadoraDeDesconto();
-        assertEquals(new BigDecimal("100").setScale(2, RoundingMode.HALF_UP), calculadoraDeDesconto.calcular(orcamentoSeisItens));
+        assertEquals(new BigDecimal("50.00"), calculadoraDeDesconto.calcular(orcamentoSeisItens));
     }
 
 }
