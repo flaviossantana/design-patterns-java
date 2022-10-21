@@ -18,3 +18,8 @@ Boas práticas de programação
 - É um padrão de projeto comportamental que permite que você passe pedidos por uma corrente de handlers. Ao receber um pedido, cada handler decide se processa o pedido ou o passa adiante para o próximo handler na corrente.
 
 ![](https://refactoring.guru/images/patterns/diagrams/chain-of-responsibility/solution1-pt-br.png)
+
+## Template Method
+- É um padrão de projeto comportamental que define o esqueleto de um algoritmo na superclasse, mas permite que as subclasses substituam etapas específicas do algoritmo sem mudar sua estrutura.
+
+![](https://refactoring.guru/images/patterns/diagrams/template-method/structure.png?id=924692f994bff6578d8408d90f6fc459)
