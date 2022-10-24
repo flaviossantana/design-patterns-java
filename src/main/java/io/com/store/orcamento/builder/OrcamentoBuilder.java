@@ -2,6 +2,7 @@ package io.com.store.orcamento.builder;
 
 import io.com.store.orcamento.ItemOrcamento;
 import io.com.store.orcamento.Orcamento;
+import io.com.store.orcamento.proxy.OrcamentoProxy;
 
 import java.math.BigDecimal;
 

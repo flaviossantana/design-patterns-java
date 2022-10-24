@@ -2,6 +2,7 @@ package io.com.store.desconto.service;
 
 import io.com.store.orcamento.Orcamento;
 import io.com.store.orcamento.builder.OrcamentoBuilder;
+import io.com.store.orcamento.proxy.OrcamentoProxy;
 import junit.framework.TestCase;
 
 import java.math.BigDecimal;
@@ -31,8 +32,9 @@ public class CalculadoraDeDescontoTest extends TestCase {
 
     public void testDeveriaCalcularDescontoOrcamentoMaiorQueMilReais() {
         Orcamento orcamentoSeisItens =  OrcamentoBuilder.init().addItem("1000").build();
+        OrcamentoProxy orcamentoProxy = new OrcamentoProxy(orcamentoSeisItens);
         CalculadoraDeDesconto calculadoraDeDesconto = new CalculadoraDeDesconto();
-        assertEquals(new BigDecimal("50.00"), calculadoraDeDesconto.calcular(orcamentoSeisItens));
+        assertEquals(new BigDecimal("50.00"), calculadoraDeDesconto.calcular(orcamentoProxy));
     }
 
 }
