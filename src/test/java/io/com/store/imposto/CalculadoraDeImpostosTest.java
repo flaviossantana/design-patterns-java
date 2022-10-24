@@ -15,7 +15,7 @@ public class CalculadoraDeImpostosTest extends TestCase {
         CalculadoraDeImpostos calculadoraDeImpostos = new CalculadoraDeImpostos();
         Orcamento orcamento = new Orcamento(BigDecimal.valueOf(100), 1);
 
-        BigDecimal imposto = calculadoraDeImpostos.calcular(orcamento, new ICMS());
+        BigDecimal imposto = calculadoraDeImpostos.calcular(orcamento, new ICMS(null));
         assertEquals(BigDecimal.valueOf(10.0), imposto);
     }
 
@@ -23,8 +23,16 @@ public class CalculadoraDeImpostosTest extends TestCase {
         CalculadoraDeImpostos calculadoraDeImpostos = new CalculadoraDeImpostos();
         Orcamento orcamento = new Orcamento(BigDecimal.valueOf(100), 1);
 
-        BigDecimal imposto = calculadoraDeImpostos.calcular(orcamento, new ISS());
+        BigDecimal imposto = calculadoraDeImpostos.calcular(orcamento, new ISS(null));
         assertEquals(BigDecimal.valueOf(6).setScale(2, RoundingMode.HALF_UP), imposto);
+    }
+
+    public void testDeveriaCalcularImpostDeISSEICMS() {
+        CalculadoraDeImpostos calculadoraDeImpostos = new CalculadoraDeImpostos();
+        Orcamento orcamento = new Orcamento(BigDecimal.valueOf(100), 1);
+
+        BigDecimal imposto = calculadoraDeImpostos.calcular(orcamento, new ISS(new ICMS(null)));
+        assertEquals(new BigDecimal("16.00"), imposto);
     }
 
 }
