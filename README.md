@@ -48,5 +48,9 @@ Boas práticas de programação
 - É um padrão de projeto estrutural que permite que você compor objetos em estruturas de árvore e trabalhar com estas estruturas como se elas fossem objetos individuais.
 ![](https://refactoring.guru/images/patterns/content/composite/composite.png)
 
+## Facade
+- É um padrão de projeto estrutural que fornece uma interface simplificada para uma biblioteca, um framework ou qualquer conjunto complexo de classes.
+![](https://refactoring.guru/images/patterns/content/facade/facade.png)
+
 ### Referências:
 Refactoring Guru: https://refactoring.guru/pt-br/design-patterns
