@@ -27,3 +27,7 @@ Boas práticas de programação
 ## State
 - É um padrão de projeto comportamental que permite que um objeto altere seu comportamento quando seu estado interno muda. Parece que o objeto mudou sua classe.
 ![](https://refactoring.guru/images/patterns/diagrams/state/problem2-pt-br.png)
+
+## Command
+- É um padrão de projeto comportamental que transforma solicitações em objetos independentes que contêm todas as informações sobre a solicitação. Este padrão permite que você parametrize métodos com diferentes solicitações, enfileire ou registre solicitações e suporte operações que não podem ser realizadas.
+![](https://refactoring.guru/images/patterns/diagrams/command/solution2-pt-br.png)
