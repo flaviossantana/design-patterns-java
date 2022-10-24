@@ -35,3 +35,6 @@ Boas práticas de programação
 ## Observer
 - É um padrão de projeto comportamental que permite que você defina uma subscrição de um-para-muitos entre objetos, de forma que quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente.
 ![](https://refactoring.guru/images/patterns/diagrams/observer/solution1-pt-br.png)
+
+## Adapter
+- É um padrão de projeto estrutural que permite objetos com interfaces incompatíveis trabalharem juntos.
