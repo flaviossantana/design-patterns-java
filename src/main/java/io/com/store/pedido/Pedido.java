@@ -16,7 +16,7 @@ public class Pedido {
         this.orcamento = orcamento;
     }
 
-    public String getNome() {
+    public String getCliente() {
         return nome;
     }
 

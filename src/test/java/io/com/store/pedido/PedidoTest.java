@@ -15,7 +15,7 @@ public class PedidoTest extends TestCase {
         LocalDateTime data = LocalDateTime.now();
         Pedido pedido = new Pedido("Siclano da Silva", data, orcamento);
 
-        Assert.assertEquals("Siclano da Silva", pedido.getNome());
+        Assert.assertEquals("Siclano da Silva", pedido.getCliente());
         Assert.assertEquals(data, pedido.getData());
         Assert.assertEquals(orcamento.getValor(), pedido.getOrcamento().getValor());
 
