@@ -37,7 +37,7 @@ Boas práticas de programação
 ![](https://refactoring.guru/images/patterns/diagrams/observer/solution1-pt-br.png)
 
 ## Adapter
-- É um padrão de projeto estrutural que permite objetos com interfaces incompatíveis trabalharem juntos.
+- É um padrão de projeto estrutural que permite objetos com interfaces incompatíveis trabalharem juntos
 ![](https://refactoring.guru/images/patterns/content/adapter/adapter-pt-br.png)
 
 ## Decorator
