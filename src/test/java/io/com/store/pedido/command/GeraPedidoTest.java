@@ -4,6 +4,7 @@ import io.com.store.pedido.act.AcaoAposGerarPedido;
 import io.com.store.pedido.handlers.GeraPedidoHandler;
 import io.com.store.pedido.observer.PedidoEmailService;
 import io.com.store.pedido.observer.PedidoRepository;
+import junit.framework.Assert;
 import junit.framework.TestCase;
 
 import java.math.BigDecimal;
@@ -17,5 +18,6 @@ public class GeraPedidoTest extends TestCase {
         List<AcaoAposGerarPedido> acaoAposGerarPedidos = Arrays.asList(new PedidoEmailService(), new PedidoRepository());
         GeraPedidoHandler geraPedidoHandler = new GeraPedidoHandler(acaoAposGerarPedidos);
         geraPedidoHandler.executa(pedidoSiclano);
+        Assert.assertEquals(pedidoSiclano.getCliente(), "Siclano da Silva");
     }
 }
