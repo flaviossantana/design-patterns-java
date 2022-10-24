@@ -1,10 +1,6 @@
 package io.com.store.pedido.command;
 
-import io.com.store.orcamento.Orcamento;
-import io.com.store.pedido.Pedido;
-
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class GeraPedido {
 

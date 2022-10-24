@@ -6,9 +6,9 @@ import java.math.BigDecimal;
 
 public abstract class Imposto {
 
-    private Imposto outroImposto;
+    private final Imposto outroImposto;
 
-    public Imposto(Imposto outroImposto) {
+    protected Imposto(Imposto outroImposto) {
         this.outroImposto = outroImposto;
     }
 
