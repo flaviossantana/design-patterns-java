@@ -10,7 +10,7 @@ public class RegistrarOrcamentoServiceTest extends TestCase {
 
     public void testDeveriaRegistrarOrcamentoApi() {
 
-        Orcamento orcamento = new Orcamento(new BigDecimal("100"), 1);
+        Orcamento orcamento = new Orcamento(new BigDecimal("1000"), 1);
         orcamento.emAnalise();
         orcamento.aprovar();
         orcamento.finalizar();
