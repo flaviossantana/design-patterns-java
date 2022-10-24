@@ -1,5 +1,7 @@
 package io.com.store.orcamento;
 
+import io.com.store.orcamento.state.EmAnalise;
+import io.com.store.orcamento.state.Finalizado;
 import io.com.store.orcamento.state.SituacaoOrcamento;
 
 import java.math.BigDecimal;
@@ -18,6 +20,10 @@ public class Orcamento {
     public void aplicarDescontoExtra() {
         BigDecimal valorDescontoExtra = this.situacao.calcularValorDescontoExtra(this);
         this.valor = this.valor.subtract(valorDescontoExtra);
+    }
+
+    public void emAnalise() {
+        this.situacao = new EmAnalise();
     }
 
     public void aprovar() {
@@ -42,5 +48,9 @@ public class Orcamento {
 
     public void setSituacao(SituacaoOrcamento situacao) {
         this.situacao = situacao;
+    }
+
+    public boolean isFinalizado() {
+        return this.situacao instanceof Finalizado;
     }
 }
