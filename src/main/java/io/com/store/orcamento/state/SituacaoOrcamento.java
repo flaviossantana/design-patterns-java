@@ -18,6 +18,6 @@ public class SituacaoOrcamento {
         throw new SituacaoOrcamentoException("Orcamentos não pode ser reprovado");
     }
     public void finalizar(Orcamento orcamento){
-        throw new SituacaoOrcamentoException("Orcamentos não pode ser finalizado!");
+        throw new SituacaoOrcamentoException("Orcamentos não pode ser finalizado");
     }
 }
