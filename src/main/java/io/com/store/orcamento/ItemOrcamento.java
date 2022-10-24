@@ -1,8 +1,10 @@
 package io.com.store.orcamento;
 
+import io.com.store.orcamento.composite.Orcavel;
+
 import java.math.BigDecimal;
 
-public class ItemOrcamento {
+public class ItemOrcamento implements Orcavel {
 
     private final BigDecimal valor;
 

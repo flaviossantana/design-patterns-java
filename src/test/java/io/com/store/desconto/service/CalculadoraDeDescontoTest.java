@@ -1,7 +1,7 @@
 package io.com.store.desconto.service;
 
 import io.com.store.orcamento.Orcamento;
-import io.com.store.orcamento.OrcamentoBuilder;
+import io.com.store.orcamento.builder.OrcamentoBuilder;
 import junit.framework.TestCase;
 
 import java.math.BigDecimal;

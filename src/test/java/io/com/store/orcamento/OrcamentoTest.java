@@ -1,5 +1,6 @@
 package io.com.store.orcamento;
 
+import io.com.store.orcamento.builder.OrcamentoBuilder;
 import io.com.store.orcamento.exception.SituacaoOrcamentoException;
 import junit.framework.TestCase;
 
@@ -74,6 +75,12 @@ public class OrcamentoTest extends TestCase {
         } catch (SituacaoOrcamentoException e) {
             assertEquals("Orcamentos não pode ser finalizado", e.getMessage());
         }
+    }
+
+    public void testDeveriaAdcionarOOrcamentoAnterior() {
+        Orcamento novoOrcamento = OrcamentoBuilder.init().addItem("100").build();
+        novoOrcamento.adicionarItem(orcamento);
+        assertEquals(new BigDecimal("200"), novoOrcamento.getValor());
     }
 
 }

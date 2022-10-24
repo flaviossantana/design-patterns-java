@@ -1,5 +1,6 @@
 package io.com.store.orcamento;
 
+import io.com.store.orcamento.composite.Orcavel;
 import io.com.store.orcamento.state.EmAnalise;
 import io.com.store.orcamento.state.Finalizado;
 import io.com.store.orcamento.state.SituacaoOrcamento;
@@ -8,11 +9,11 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Orcamento {
+public class Orcamento implements Orcavel {
 
     private BigDecimal valor;
     private SituacaoOrcamento situacao;
-    private final List<ItemOrcamento> itens;
+    private final List<Orcavel> itens;
 
     public Orcamento() {
         this.valor = BigDecimal.ZERO;
@@ -53,7 +54,7 @@ public class Orcamento {
         return this.itens.size();
     }
 
-    public void adicionarItem(ItemOrcamento item) {
+    public void adicionarItem(Orcavel item) {
         this.itens.add(item);
         this.valor = this.valor.add(item.getValor());
     }

@@ -4,7 +4,7 @@ import io.com.store.imposto.service.CalculadoraDeImpostos;
 import io.com.store.imposto.strategy.ICMS;
 import io.com.store.imposto.strategy.ISS;
 import io.com.store.orcamento.Orcamento;
-import io.com.store.orcamento.OrcamentoBuilder;
+import io.com.store.orcamento.builder.OrcamentoBuilder;
 import junit.framework.TestCase;
 
 import java.math.BigDecimal;

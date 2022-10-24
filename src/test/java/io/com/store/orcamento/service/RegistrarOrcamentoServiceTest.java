@@ -1,7 +1,7 @@
 package io.com.store.orcamento.service;
 
 import io.com.store.orcamento.Orcamento;
-import io.com.store.orcamento.OrcamentoBuilder;
+import io.com.store.orcamento.builder.OrcamentoBuilder;
 import io.com.store.orcamento.exception.SituacaoOrcamentoException;
 import io.com.store.orcamento.http.client.ApacheHttpClient;
 import junit.framework.Assert;
