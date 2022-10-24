@@ -5,25 +5,24 @@ import io.com.store.orcamento.state.Finalizado;
 import io.com.store.orcamento.state.SituacaoOrcamento;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Orcamento {
 
     private BigDecimal valor;
-    private final int quantidadeItens;
     private SituacaoOrcamento situacao;
+    private final List<ItemOrcamento> itens;
 
-    public Orcamento(BigDecimal valor, int quantidadeItens) {
-        this.valor = valor;
-        this.quantidadeItens = quantidadeItens;
+    public Orcamento() {
+        this.valor = BigDecimal.ZERO;
+        this.itens = new ArrayList<>();
+        this.situacao = new EmAnalise();
     }
 
     public void aplicarDescontoExtra() {
         BigDecimal valorDescontoExtra = this.situacao.calcularValorDescontoExtra(this);
         this.valor = this.valor.subtract(valorDescontoExtra);
-    }
-
-    public void emAnalise() {
-        this.situacao = new EmAnalise();
     }
 
     public void aprovar() {
@@ -38,19 +37,25 @@ public class Orcamento {
         this.situacao.finalizar(this);
     }
 
-    public BigDecimal getValor() {
-        return valor;
-    }
-
-    public int getQuantidadeItens() {
-        return quantidadeItens;
+    public boolean isFinalizado() {
+        return this.situacao instanceof Finalizado;
     }
 
     public void setSituacao(SituacaoOrcamento situacao) {
         this.situacao = situacao;
     }
 
-    public boolean isFinalizado() {
-        return this.situacao instanceof Finalizado;
+    public BigDecimal getValor() {
+        return valor;
     }
+
+    public int getQuantidadeItens() {
+        return this.itens.size();
+    }
+
+    public void adicionarItem(ItemOrcamento item) {
+        this.itens.add(item);
+        this.valor = this.valor.add(item.getValor());
+    }
+
 }

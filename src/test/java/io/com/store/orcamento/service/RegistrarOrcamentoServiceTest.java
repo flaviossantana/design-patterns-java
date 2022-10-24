@@ -1,6 +1,7 @@
 package io.com.store.orcamento.service;
 
 import io.com.store.orcamento.Orcamento;
+import io.com.store.orcamento.OrcamentoBuilder;
 import io.com.store.orcamento.exception.SituacaoOrcamentoException;
 import io.com.store.orcamento.http.client.ApacheHttpClient;
 import junit.framework.Assert;
@@ -12,8 +13,7 @@ public class RegistrarOrcamentoServiceTest extends TestCase {
 
     public void testDeveriaRegistrarOrcamentoApi() {
 
-        Orcamento orcamento = new Orcamento(new BigDecimal("1000"), 1);
-        orcamento.emAnalise();
+        Orcamento orcamento = OrcamentoBuilder.init().addItem("1000").build();
         orcamento.aprovar();
         orcamento.finalizar();
 
@@ -24,8 +24,7 @@ public class RegistrarOrcamentoServiceTest extends TestCase {
 
     public void testDeveriaLancarExcecaoOrcamentoNaoFinalizado() {
         try {
-            Orcamento orcamento = new Orcamento(new BigDecimal("1000"), 1);
-            orcamento.emAnalise();
+            Orcamento orcamento = new Orcamento();
             orcamento.aprovar();
 
             RegistrarOrcamentoService registrarOrcamentoService = new RegistrarOrcamentoService(new ApacheHttpClient());

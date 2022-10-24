@@ -10,14 +10,14 @@ import java.util.List;
 
 public class GeraPedidoHandler {
 
-    private List<AcaoAposGerarPedido> acoes;
+    private final List<AcaoAposGerarPedido> acoes;
 
     public GeraPedidoHandler(List<AcaoAposGerarPedido> acoes) {
         this.acoes = acoes;
     }
 
     public void executa(GeraPedido dados) {
-        Orcamento orcamento = new Orcamento(dados.getValor(), dados.getQuantidadeItens());
+        Orcamento orcamento = new Orcamento();
         Pedido pedido = new Pedido(dados.getCliente(), LocalDateTime.now(), orcamento);
         acoes.forEach(a -> a.executaAcao(pedido));
     }
