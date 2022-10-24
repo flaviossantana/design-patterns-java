@@ -41,3 +41,4 @@ Boas práticas de programação
 
 ## Decorator
 - É um padrão de projeto estrutural que permite que você adicione novos comportamentos a objetos existentes ao envolvê-los em objetos de embalagem que contêm os comportamentos.
+![](https://refactoring.guru/images/patterns/content/decorator/decorator.png) 
