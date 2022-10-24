@@ -38,3 +38,6 @@ Boas práticas de programação
 
 ## Adapter
 - É um padrão de projeto estrutural que permite objetos com interfaces incompatíveis trabalharem juntos.
+
+## Decorator
+- É um padrão de projeto estrutural que permite que você adicione novos comportamentos a objetos existentes ao envolvê-los em objetos de embalagem que contêm os comportamentos.
