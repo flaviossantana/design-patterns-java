@@ -38,6 +38,7 @@ Boas práticas de programação
 
 ## Adapter
 - É um padrão de projeto estrutural que permite objetos com interfaces incompatíveis trabalharem juntos.
+![](https://refactoring.guru/images/patterns/content/adapter/adapter-pt-br.png)
 
 ## Decorator
 - É um padrão de projeto estrutural que permite que você adicione novos comportamentos a objetos existentes ao envolvê-los em objetos de embalagem que contêm os comportamentos.
