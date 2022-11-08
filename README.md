@@ -58,3 +58,5 @@ Boas práticas de programação
 
 ### Referências:
 Refactoring Guru: https://refactoring.guru/pt-br/design-patterns
+
+V:1.0.0
